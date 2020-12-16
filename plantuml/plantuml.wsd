@@ -1,0 +1,117 @@
+@startuml Personal Style
+
+skinparam{
+    BackgroundColor transparent
+    Shadowing false
+    Handwritten false
+    BorderColor #303030
+
+    ControlBackgroundColor transparent
+    ControlBorderColor #303030
+
+    ActorBackgroundColor transparent
+    ActorBorderColor #303030
+
+    BoundaryBackgroundColor transparent
+    BoundaryBorderColor #303030
+
+    FrameBackgroundColor transparent
+    FrameBorderColor #303030
+}
+
+skinparam Note {
+    BorderColor                 #303030
+    BackgroundColor             transparent
+}
+
+skinparam Sequence {
+    TitleFontColor              #303030
+    ArrowColor                  #303030
+    DividerBackgroundColor      #EEEEEE
+    GroupBackgroundColor        #EEEEEE
+    LifeLineBackgroundColor     white
+    LifeLineBorderColor         #303030
+    ParticipantBackgroundColor  transparent
+    ParticipantBorderColor      #303030
+
+    BoxBackgroundColor transparent
+    BoxLineColor #303030
+    BoxBorderColor #303030
+
+
+
+    ControlBackgroundColor      transparent
+    ControlBorderColor          #303030
+}
+
+skinparam Title {
+    FontColor                   #303030
+}
+
+skinparam Activity {
+    ArrowColor                  #303030
+    ArrowFontSize               10
+    BarColor                    #F0A0A0
+    BorderColor                 #303030
+    BackgroundColor             transparent
+}
+
+skinparam State {
+    BackgroundColor              transparent
+    BackgroundColor<<Failure>>   Tomato
+    BorderColor<<Failure>>       DarkRed
+    BackgroundColor<<Success>>   PaleGreen
+    BorderColor<<Success>>       DarkGreen
+    BackgroundColor<<Warning>>   LightYellow
+    BorderColor<<Warning>>       Gold
+    BorderColor                  #303030
+    ArrowColor                   #606060
+    FontStyle                    bold
+}
+skinparam Component {
+    BackgroundColor              transparent
+    BorderColor                  #303030
+
+}
+skinparam Interface {
+    BackgroundColor              transparent
+    BorderColor                  #303030
+}
+
+skinparam class {
+    BackgroundColor              transparent
+    BorderColor                  #303030
+}
+
+skinparam stereotypeC{
+    BackgroundColor transparent
+    'BorderColor transparent
+}
+skinparam stereotypeA{
+    BackgroundColor transparent
+    'BorderColor transparent
+}
+skinparam stereotypeI{
+    BackgroundColor transparent
+    'BorderColor transparent
+}
+'hide empty members
+'hide circle
+'hide stereotype
+
+skinparam circle {
+    BackgroundColor              transparent
+    BorderColor                  #303030
+}
+
+skinparam Object {
+    'BackgroundColor              #FEFEFE
+    BorderColor                  #303030
+    FontStyle                    bold
+    FontSize                     14
+}
+
+skinparam Package {
+    BorderThickness              1
+}
+@enduml

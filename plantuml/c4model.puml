@@ -5,6 +5,7 @@
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist/AWSCommon.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/LambdaLambdaFunction.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
 
 
 AddRelTag("async", $lineStyle = DashedLine, $legendText="Async call")
@@ -12,3 +13,4 @@ AddElementTag("springboot", $sprite="spring", $legendText="Springboot Applicatio
 AddElementTag("angular", $sprite="angularjs", $legendText="Angular Application")
 AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda Function")
 AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
+AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")

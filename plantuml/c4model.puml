@@ -8,6 +8,9 @@
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
 
+!define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/apigee.puml
+
 skinparam RoundCorner 10
 
 AddRelTag("async", $lineStyle = DashedLine, $legendText="Async call")
@@ -17,3 +20,4 @@ AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda 
 AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
 AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
 AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
+AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")

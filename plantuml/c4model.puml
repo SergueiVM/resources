@@ -8,6 +8,7 @@
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
 
+skinparam RoundCorner 10
 
 AddRelTag("async", $lineStyle = DashedLine, $legendText="Async call")
 AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")

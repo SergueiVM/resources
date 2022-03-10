@@ -1,0 +1,5 @@
+skinparam {
+    Monochrome true
+    Shadowing false
+    RoundCorner 10
+}

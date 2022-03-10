@@ -20,4 +20,4 @@ AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda 
 AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
 AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
 AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
-AddElementTag("apigee", $sprite="apigee*.33", $techn="apigee", $legendText="apigee proxy")
+AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")

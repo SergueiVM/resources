@@ -1,4 +1,4 @@
-name: docs
+name: puml
 on:
   push:
     branches: [ master ]

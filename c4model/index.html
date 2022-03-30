@@ -1,0 +1,23 @@
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!define DEVICONS2 https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons2
+!include DEVICONS2/spring.puml
+!include DEVICONS2/angularjs.puml
+!include DEVICONS2/postgresql_wordmark.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist/AWSCommon.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/LambdaLambdaFunction.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
+
+!define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/apigee.puml
+
+skinparam RoundCorner 10
+
+AddRelTag("async", $lineStyle = DashedLine, $legendText="Async call")
+AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")
+AddElementTag("angular", $sprite="angularjs", $legendText="Angular Application")
+AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda Function")
+AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
+AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
+AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
+AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")

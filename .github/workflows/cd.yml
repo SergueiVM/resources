@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Copy C4 Model
-        run: cp ./plantuml/c4model.puml ./docs/c4model/index.html
+        run: mkdir -p ./docs/c4model && cp ./plantuml/c4model.puml ./docs/c4model/index.html
 
       - name: Commit files
         run: |

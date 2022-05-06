@@ -8,6 +8,7 @@
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist/AWSCommon.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/LambdaLambdaFunction.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/RDS.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
 
 !define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites

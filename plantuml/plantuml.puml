@@ -1,5 +1,36 @@
+@startuml style
 skinparam {
-    Monochrome true
-    Shadowing false
-    RoundCorner 10
+  style strictuml
+  Shadowing false
+  RoundCorner 10
+  actorStyle awesome
+  BoxPadding 25
+
+
+  ParticipantBackgroundColor White
+  ParticipantBorderColor Black
+
+  SequenceLifeLineBackgroundColor White
+  DatabaseBackgroundColor White
+  DatabaseBorderColor Black
+  ActorBackgroundColor White
+  ActorBorderColor Black
+
+  NoteBackgroundColor WhiteSmoke
+  ArrowColor Black
+
+  LegendBackgroundColor WhiteSmoke
+
+  Sequence {
+    BoxBackgroundColor White
+    BoxBorderColor Black
+    BorderColor Black
+    DividerBackgroundColor White
+    DelayLineColor Black
+    LifeLineBorderColor Black
+  }
+
 }
+
+hide footbox
+@enduml

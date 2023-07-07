@@ -16,7 +16,7 @@
 
 skinparam RoundCorner 10
 
-AddRelTag("async", $lineStyle = DashedLine, $legendText="Async call (dashed)")
+AddRelTag("async", $lineStyle = DashedLine(), $legendText="Async call (dashed)")
 AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")
 AddElementTag("angular", $sprite="angularjs", $legendText="Angular Application")
 AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda Function")

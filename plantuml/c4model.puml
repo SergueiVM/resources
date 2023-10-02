@@ -25,3 +25,5 @@ AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $l
 AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
 AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")
 AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
+
+hide @unlinked

@@ -37,4 +37,15 @@ AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldL
 AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
 AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
 
+'For highlight difference
+!$NEW_COLOR ?= "ForestGreen"
+!$NEW_BORDER_THICKNESS ?= 3
+!$DEPRECATE_COLOR ?= "Tomato"
+
+AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
+AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
+
+AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
+AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
+
 hide @unlinked

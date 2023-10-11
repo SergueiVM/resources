@@ -10,6 +10,7 @@
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/RDS.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/APIGateway.puml
 
 !define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
 !includeurl SPRITESURL/apigee.puml
@@ -24,6 +25,7 @@ AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendTex
 AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
 AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
 AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")
+AddElementTag("apigateway", $sprite="APIGateway", $techn="API Gateway", $legendText="AWS API Gateway")
 AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
 
 'For highlight difference

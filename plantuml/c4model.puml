@@ -5,6 +5,7 @@
 !include DEVICONS2/postgresql_wordmark.puml
 !include DEVICONS2/java_wordmark.puml
 !include DEVICONS2/java.puml
+!include DEVICONS2/mysql.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist/AWSCommon.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/LambdaLambdaFunction.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
@@ -27,6 +28,7 @@ AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", 
 AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")
 AddElementTag("apigateway", $sprite="APIGateway", $techn="API Gateway", $legendText="AWS API Gateway")
 AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
+AddElementTag("mysql", $sprite="mysql", $techn="MySQL", $legendText="MySQL")
 
 'For highlight difference
 !$NEW_COLOR ?= "ForestGreen"

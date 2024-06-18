@@ -13,6 +13,7 @@
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
 '!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/APIGateway.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/SimpleNotificationServiceTopic.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/SecurityIdentityCompliance/KeyManagementService.puml
 
 !define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
 !includeurl SPRITESURL/apigee.puml
@@ -47,6 +48,7 @@ AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
 AddElementTag("mysql", $sprite="mysql", $techn="MySQL", $legendText="MySQL")
 AddElementTag("sns", $sprite="SimpleNotificationServiceTopic", $techn="SNS Topic", $legendText="Simple Notification Service Topic")
 AddElementTag("eventBridge", $sprite="EventBridge", $techn="EventBridge Event", $legendText="EventBridge Event")
+AddElementTag("kms", $sprite="KeyManagementService", $techn="KMS", $legendText="Key Management Service")
 
 'For highlight difference
 !$NEW_COLOR ?= "ForestGreen"

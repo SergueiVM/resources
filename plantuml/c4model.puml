@@ -7,16 +7,15 @@
 !include DEVICONS2/java.puml
 !include DEVICONS2/mysql.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist/AWSCommon.puml
-!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/LambdaLambdaFunction.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/RDS.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageServiceBucket.puml
-'!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/APIGateway.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/SimpleNotificationServiceTopic.puml
 !include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/SecurityIdentityCompliance/KeyManagementService.puml
 
 !define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
 !includeurl SPRITESURL/apigee.puml
+!include ./sprites/sprites.iuml
 
 skinparam RoundCorner 10
 
@@ -27,12 +26,6 @@ xPQ7pkD028I7kalU_tslB3eX6UUyVs_vqWjcWB7mxPFnu84pIEAvqI5OZ6V66-0n1VHC1RGo1yEV9n-8
 xRZXgdTTM9xlupVqkZe2QKfgcFrVtL_HbFIiaRzrUevpRGPwvVZdwtz-_ru-luw26AJH_DDyUKuW6MV-JHo8dTNJpv-4uPUh9ry41PT4Z__9JxcmF4mndh5w
 MlilOLYDiOt_cW68AQ1drjnUFMTY1MpgiRDwzAnR4_khHz452A0cmDpR7DBhd-N3AoQErnm6hG5VOyTuXLNyCt1mh39eDwAtP8QddkSmi7Z9LIc1_VQfUF3W
 Dm
-}
-
-sprite $APIGateway [64x64/16z] {
-xTO5SaGn30DGnK7h_lSjj-xiw7EvqJAy7yw4FoqpCpqPRsAfxzKZ0-1D0EInHti1j0UAR-gMWEpAUmPIMxz2Dy0wgNpykfGeGVcetOAkqKBbetUgl8953siV
-esFA0vtSzcG7jES-ppqU8Dy_VRKNl_vBx-EQxyWdlLUIp2YiVi9xGYKT61N93tjFZueDngUtHxqzSUQdIYJOEU-02x-x_XMPelwx-y_Go8havyPl04wU6x_7
-5EHBypUZN_8S_d_M_zn_c-_nthItE5ve7mSKMpYwl5n1-zl_B5z1Uwtr5PJNMbz1UQtr5PJNMbz1d5z3_vZCpDm3
 }
 
 AddRelTag("async", $lineStyle = DashedLine(), $legendText="Async call (dashed)")

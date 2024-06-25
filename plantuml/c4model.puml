@@ -42,6 +42,7 @@ AddElementTag("mysql", $sprite="mysql", $techn="MySQL", $legendText="MySQL")
 AddElementTag("sns", $sprite="SimpleNotificationServiceTopic", $techn="SNS Topic", $legendText="Simple Notification Service Topic")
 AddElementTag("eventBridge", $sprite="EventBridge", $techn="EventBridge Event", $legendText="EventBridge Event")
 AddElementTag("kms", $sprite="KeyManagementService", $techn="KMS", $legendText="Key Management Service")
+AddElementTag("cognito", $sprite="cognito", $techn="Cognito", $legendText="Cognito")
 
 'For highlight difference
 !$NEW_COLOR ?= "ForestGreen"

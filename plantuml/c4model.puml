@@ -15,7 +15,7 @@
 
 !define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
 !includeurl SPRITESURL/apigee.puml
-!include ./sprites/sprites.iuml
+!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/sprites/sprites.iuml
 
 skinparam RoundCorner 10
 

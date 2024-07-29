@@ -3,6 +3,7 @@
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Sequence.puml
 !include BASEPATH/plantuml/sprites/sprites.iuml
 !include BASEPATH/plantuml/c4-common.iuml
 !include BASEPATH/plantuml/c4-tags.iuml

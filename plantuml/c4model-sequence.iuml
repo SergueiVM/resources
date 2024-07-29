@@ -3,4 +3,33 @@
 !include BASEPATH/plantuml/c4model.iuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Sequence.puml
 
+hide footbox
+
+' Rewrite deployment Nodes as Boundaries
+' Boundary($alias, $label, $type="", $tags="", $link="", $descr = "")
+
+!unquoted procedure Deployment_Node($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
+Boundary($alias, $label, $type, $tags, $link, $descr)
+!endprocedure
+
+!unquoted procedure Deployment_Node_L($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
+Boundary($alias, $label, $type, $tags, $link, $descr)
+!endprocedure
+
+!unquoted procedure Deployment_Node_R($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
+Boundary($alias, $label, $type, $tags, $link, $descr)
+!endprocedure
+
+!unquoted procedure Node($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
+Boundary($alias, $label, $type, $tags, $link, $descr)
+!endprocedure
+
+!unquoted procedure Node_L($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
+Boundary($alias, $label, $type, $tags, $link, $descr)
+!endprocedure
+
+!unquoted procedure Node_R($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
+Boundary($alias, $label, $type, $tags, $link, $descr)
+!endprocedure
+
 @enduml

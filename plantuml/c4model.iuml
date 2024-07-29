@@ -1,6 +1,6 @@
 @startuml
 !define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
-
+' A
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
 !include BASEPATH/plantuml/sprites/sprites.iuml

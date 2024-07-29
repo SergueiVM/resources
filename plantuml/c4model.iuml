@@ -1,0 +1,69 @@
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+!define DEVICONS2 https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons2
+!include DEVICONS2/spring.puml
+!include DEVICONS2/angularjs.puml
+!include DEVICONS2/postgresql_wordmark.puml
+!include DEVICONS2/java_wordmark.puml
+!include DEVICONS2/java.puml
+!include DEVICONS2/mysql.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist/AWSCommon.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDBTable.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/RDS.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/SimpleNotificationServiceTopic.puml
+!include https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/SecurityIdentityCompliance/KeyManagementService.puml
+
+!define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/apigee.puml
+!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/sprites/sprites.iuml
+
+skinparam RoundCorner 10
+
+
+sprite $EventBridge [64x64/16z] {
+xPQ7pkD028I7kalU_tslB3eX6UUyVs_vqWjcWB7mxPFnu84pIEAvqI5OZ6V66-0n1VHC1RGo1yEV9n-8bA4f1_-m9yKhx12FUTk1L-BP6hZRaGcmAI17OGJT
+6_yTjGDWa5nN4Qucu5uP5hxPHk_vBQPkzj5QkmIMBxebW8u3fqmyghBEy4CR5wc4Sw8EkP-KOIMtq7GKH-awnQleKNsQ-JO0DYDmR3Gz6DKcpP87NTXuAImb
+xRZXgdTTM9xlupVqkZe2QKfgcFrVtL_HbFIiaRzrUevpRGPwvVZdwtz-_ru-luw26AJH_DDyUKuW6MV-JHo8dTNJpv-4uPUh9ry41PT4Z__9JxcmF4mndh5w
+MlilOLYDiOt_cW68AQ1drjnUFMTY1MpgiRDwzAnR4_khHz452A0cmDpR7DBhd-N3AoQErnm6hG5VOyTuXLNyCt1mh39eDwAtP8QddkSmi7Z9LIc1_VQfUF3W
+Dm
+}
+
+AddRelTag("async", $lineStyle = DashedLine(), $legendText="Async call (dashed)")
+AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")
+AddElementTag("angular", $sprite="angularjs", $legendText="Angular Application")
+AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda Function")
+AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
+AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
+AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
+AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")
+AddElementTag("apigateway", $sprite="APIGateway", $techn="API Gateway", $legendText="AWS API Gateway")
+AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
+AddElementTag("mysql", $sprite="mysql", $techn="MySQL", $legendText="MySQL")
+AddElementTag("sns", $sprite="SimpleNotificationServiceTopic", $techn="SNS Topic", $legendText="Simple Notification Service Topic")
+AddElementTag("eventBridge", $sprite="EventBridge", $techn="EventBridge Event", $legendText="EventBridge Event")
+AddElementTag("kms", $sprite="KeyManagementService", $techn="KMS", $legendText="Key Management Service")
+AddElementTag("cognito", $sprite="cognito", $techn="Cognito", $legendText="Cognito")
+
+'For highlight difference
+!$NEW_COLOR ?= "ForestGreen"
+!$NEW_BORDER_THICKNESS ?= 3
+!$DEPRECATE_COLOR ?= "Tomato"
+
+AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
+AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
+
+AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
+AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
+
+'For highlight difference
+!$NEW_COLOR ?= "ForestGreen"
+!$NEW_BORDER_THICKNESS ?= 3
+!$DEPRECATE_COLOR ?= "Tomato"
+
+AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
+AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
+
+AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
+AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
+
+hide @unlinked

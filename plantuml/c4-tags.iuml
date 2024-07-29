@@ -1,0 +1,24 @@
+@startuml
+
+AddRelTag("async", $lineStyle = DashedLine(), $legendText="Async call (dashed)")
+AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")
+AddElementTag("angular", $sprite="angularjs", $legendText="Angular Application")
+AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda Function")
+AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
+AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
+AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
+AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")
+AddElementTag("apigateway", $sprite="APIGateway", $techn="API Gateway", $legendText="AWS API Gateway")
+AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
+AddElementTag("mysql", $sprite="mysql", $techn="MySQL", $legendText="MySQL")
+AddElementTag("sns", $sprite="SimpleNotificationServiceTopic", $techn="SNS Topic", $legendText="Simple Notification Service Topic")
+AddElementTag("eventBridge", $sprite="EventBridge", $techn="EventBridge Event", $legendText="EventBridge Event")
+AddElementTag("kms", $sprite="KeyManagementService", $techn="KMS", $legendText="Key Management Service")
+AddElementTag("cognito", $sprite="cognito", $techn="Cognito", $legendText="Cognito")
+AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
+AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
+AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
+AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
+
+@enduml
+

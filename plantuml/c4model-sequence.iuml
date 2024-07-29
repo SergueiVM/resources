@@ -1,4 +1,3 @@
-@startuml
 !define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
@@ -48,6 +47,3 @@ Boundary($alias, $label, $type, $tags, $link, $descr)
 !unquoted procedure Node_R($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
 Boundary($alias, $label, $type, $tags, $link, $descr)
 !endprocedure
-
-
-@enduml

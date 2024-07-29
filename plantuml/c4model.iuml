@@ -1,5 +1,5 @@
 @startuml
-!define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/feature/refactor-iuml
+!define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
@@ -7,11 +7,12 @@
 !include BASEPATH/plantuml/c4-common.iuml
 !include BASEPATH/plantuml/c4-tags.iuml
 
-!unquoted procedure Boundary($alias, $label, $type="", $tags="", $link="")
+!unquoted procedure Boundary($alias, $label, $type="", $tags="", $link="", $descr = "")
 !$boundaryTags = $addBoundaryPostfix($tags)
-' nodes $type reuses $techn definition of $boundaryTags
+' boundary $type reuses $techn definition of $boundaryTags
 !$type=$toElementArg($type, $boundaryTags, "ElementTagTechn", "boundary")
-rectangle "$getBoundary($label, $type)" $toStereos("boundary", $boundaryTags) as $alias $getLink($link) {
+!$sprite=$toElementArg("", $boundaryTags, "ElementTagSprite", "boundary")
+rectangle "$getBoundary($label, $type, $descr, $sprite)" $toStereos("boundary", $boundaryTags) as $alias $getLink($link) {
 !endprocedure
 
 !unquoted procedure Boundary_End()

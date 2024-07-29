@@ -1,7 +1,9 @@
 @startuml
+!define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/feature/refactor-iuml
+
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
-!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/sprites/sprites.iuml
-!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/c4-common.iuml
-!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/c4-tags.iuml
+!include BASEPATH/plantuml/sprites/sprites.iuml
+!include BASEPATH/plantuml/c4-common.iuml
+!include BASEPATH/plantuml/c4-tags.iuml
 @enduml

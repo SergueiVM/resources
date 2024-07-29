@@ -7,18 +7,6 @@
 !include BASEPATH/plantuml/c4-common.iuml
 !include BASEPATH/plantuml/c4-tags.iuml
 
-!unquoted procedure Boundary($alias, $label, $type="", $tags="", $link="", $descr = "")
-!$boundaryTags = $addBoundaryPostfix($tags)
-' boundary $type reuses $techn definition of $boundaryTags
-!$type=$toElementArg($type, $boundaryTags, "ElementTagTechn", "boundary")
-!$sprite=$toElementArg("", $boundaryTags, "ElementTagSprite", "boundary")
-rectangle "$getBoundary($label, $type, $descr, $sprite)" $toStereos("boundary", $boundaryTags) as $alias $getLink($link) {
-!endprocedure
-
-!unquoted procedure Boundary_End()
-}
-!endprocedure
-
 hide footbox
 
 ' Rewrite deployment Nodes as Boundaries

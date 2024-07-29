@@ -1,0 +1,10 @@
+@startuml
+skinparam RoundCorner 10
+
+'For highlight difference
+!$NEW_COLOR ?= "ForestGreen"
+!$NEW_BORDER_THICKNESS ?= 3
+!$DEPRECATE_COLOR ?= "Tomato"
+
+hide @unlinked
+@enduml

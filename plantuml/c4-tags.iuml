@@ -1,8 +1,4 @@
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
-!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/sprites/sprites.iuml
-
-skinparam RoundCorner 10
+@startuml
 
 AddRelTag("async", $lineStyle = DashedLine(), $legendText="Async call (dashed)")
 AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")
@@ -19,27 +15,10 @@ AddElementTag("sns", $sprite="SimpleNotificationServiceTopic", $techn="SNS Topic
 AddElementTag("eventBridge", $sprite="EventBridge", $techn="EventBridge Event", $legendText="EventBridge Event")
 AddElementTag("kms", $sprite="KeyManagementService", $techn="KMS", $legendText="Key Management Service")
 AddElementTag("cognito", $sprite="cognito", $techn="Cognito", $legendText="Cognito")
-
-'For highlight difference
-!$NEW_COLOR ?= "ForestGreen"
-!$NEW_BORDER_THICKNESS ?= 3
-!$DEPRECATE_COLOR ?= "Tomato"
-
 AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
 AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
-
 AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
 AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
 
-'For highlight difference
-!$NEW_COLOR ?= "ForestGreen"
-!$NEW_BORDER_THICKNESS ?= 3
-!$DEPRECATE_COLOR ?= "Tomato"
+@enduml
 
-AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
-AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
-
-AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
-AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
-
-hide @unlinked

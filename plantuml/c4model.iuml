@@ -1,45 +1,20 @@
+@startuml
+!define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/feature/refactor-iuml
+
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
-!include https://raw.githubusercontent.com/SergueiVM/resources/master/plantuml/sprites/sprites.iuml
+!include BASEPATH/plantuml/sprites/sprites.iuml
+!include BASEPATH/plantuml/c4-common.iuml
+!include BASEPATH/plantuml/c4-tags.iuml
 
-skinparam RoundCorner 10
+!unquoted procedure Boundary($alias, $label, $type="", $tags="", $link="")
+!$boundaryTags = $addBoundaryPostfix($tags)
+' nodes $type reuses $techn definition of $boundaryTags
+!$type=$toElementArg($type, $boundaryTags, "ElementTagTechn", "boundary")
+rectangle "$getBoundary($label, $type)" $toStereos("boundary", $boundaryTags) as $alias $getLink($link) {
+!endprocedure
 
-AddRelTag("async", $lineStyle = DashedLine(), $legendText="Async call (dashed)")
-AddElementTag("springboot", $sprite="spring", $legendText="Springboot Application")
-AddElementTag("angular", $sprite="angularjs", $legendText="Angular Application")
-AddElementTag("lambda", $sprite="LambdaLambdaFunction", $legendText="AWS Lambda Function")
-AddElementTag("dynamodb", $sprite="DynamoDBTable", $techn="DynamoDB", $legendText="DynamoDB Table")
-AddElementTag("s3", $sprite="SimpleStorageServiceBucket", $techn="S3 Bucket", $legendText="S3 Bucket")
-AddElementTag("postgresql", $sprite="postgresql_wordmark", $techn="PostgreSQL", $legendText="PostgreSQL")
-AddElementTag("apigee", $sprite="apigee", $techn="apigee", $legendText="apigee proxy")
-AddElementTag("apigateway", $sprite="APIGateway", $techn="API Gateway", $legendText="AWS API Gateway")
-AddElementTag("java", $sprite="java", $techn="Java", $legendText="Java")
-AddElementTag("mysql", $sprite="mysql", $techn="MySQL", $legendText="MySQL")
-AddElementTag("sns", $sprite="SimpleNotificationServiceTopic", $techn="SNS Topic", $legendText="Simple Notification Service Topic")
-AddElementTag("eventBridge", $sprite="EventBridge", $techn="EventBridge Event", $legendText="EventBridge Event")
-AddElementTag("kms", $sprite="KeyManagementService", $techn="KMS", $legendText="Key Management Service")
-AddElementTag("cognito", $sprite="cognito", $techn="Cognito", $legendText="Cognito")
-
-'For highlight difference
-!$NEW_COLOR ?= "ForestGreen"
-!$NEW_BORDER_THICKNESS ?= 3
-!$DEPRECATE_COLOR ?= "Tomato"
-
-AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
-AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
-
-AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
-AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
-
-'For highlight difference
-!$NEW_COLOR ?= "ForestGreen"
-!$NEW_BORDER_THICKNESS ?= 3
-!$DEPRECATE_COLOR ?= "Tomato"
-
-AddRelTag("deprecate", $textColor=$DEPRECATE_COLOR, $lineColor=$DEPRECATE_COLOR, $lineStyle="BoldLine()", $legendText="For deprecation")
-AddRelTag("new", $textColor=$NEW_COLOR, $lineColor=$NEW_COLOR, $lineStyle="BoldLine()", $legendText="New feature")
-
-AddElementTag("deprecate", $borderColor=$DEPRECATE_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="For deprecation")
-AddElementTag("new", $borderColor=$NEW_COLOR, $borderThickness=$NEW_BORDER_THICKNESS, $borderStyle="BoldLine()", $legendText="New feature")
-
-hide @unlinked
+!unquoted procedure Boundary_End()
+}
+!endprocedure
+@enduml

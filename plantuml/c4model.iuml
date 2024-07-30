@@ -63,4 +63,11 @@ rectangle "$getNode_L($label, $type, $descr, $sprite)$getProps_L()" $toStereos("
 rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("node",$tags) as $alias $getLink($link) {
 !endprocedure
 
+
+'Sequence Responses -> Do NOT show them
+!unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="", $index="", $rel="")
+!endprocedure
+
+!unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
+!endprocedure
 @enduml

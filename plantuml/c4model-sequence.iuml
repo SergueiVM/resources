@@ -35,3 +35,43 @@ Boundary($alias, $label, $type, $tags, $link, $descr)
 !unquoted procedure Node_R($alias, $label, $type="Node", $descr="", $sprite="", $tags="", $link="")
 Boundary($alias, $label, $type, $tags, $link, $descr)
 !endprocedure
+
+'Rel sequence rewrite to activate and deactivate componentes
+!unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="", $index="", $rel="")
+  !if ($show_index == %true())
+    !$pre = $getPrefix($index)
+  !else
+    !$pre = ""
+  !endif
+  !if ($rel == "")
+    !$rel = "<--"
+  !endif
+$getRel($rel, $from, $to, $pre + $label, $techn, $descr, $sprite, $tags, $link)
+deactivate $to
+!endprocedure
+
+!unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
+Resp($from, $to, $label, $techn, $descr, $sprite, $tags, $link, "", "")
+!endprocedure
+
+!unquoted function $Activate($elem)
+  !return 'activate ' + $elem
+!endfunction
+
+!unquoted procedure Rel($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="", $index="", $rel="")
+  !if ($show_index == %true())
+    !$pre = $getPrefix($index)
+  !else
+    !$pre = ""
+  !endif
+  !if ($rel == "")
+    !$rel = "->"
+  !endif
+$getRel($rel, $from, $to, $pre + $label, $techn, $descr, $sprite, $tags, $link)
+activate $to
+!endprocedure
+
+!unquoted procedure Rel($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
+Rel($from, $to, $label, $techn, $descr, $sprite, $tags, $link, "", "")
+activate $to
+!endprocedure

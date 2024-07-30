@@ -68,7 +68,11 @@ Resp($from, $to, $label, $techn, $descr, $sprite, $tags, $link, "", "")
     !$rel = "->"
   !endif
 $getRel($rel, $from, $to, $pre + $label, $techn, $descr, $sprite, $tags, $link)
+
+!if ($from != $to)
 activate $to
+!endif
+
 !endprocedure
 
 !unquoted procedure Rel($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")

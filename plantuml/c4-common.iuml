@@ -1,5 +1,8 @@
 @startuml
-skinparam RoundCorner 10
+skinparam {
+  RoundCorner 10
+  BackgroundColor transparent
+}
 
 'For highlight difference
 !$NEW_COLOR ?= "ForestGreen"

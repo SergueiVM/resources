@@ -72,4 +72,17 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 !unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
 ' DO NOTHING
 !endprocedure
+
+!unquoted procedure Activate($obj)
+' DO NOTHING
+!endprocedure
+
+!unquoted procedure Deactivate($obj)
+' DO NOTHING
+!endprocedure
+
+!unquoted procedure TimeBreak()
+' DO NOTHING
+!endprocedure
+
 @enduml

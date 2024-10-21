@@ -79,3 +79,15 @@ activate $to
 Rel($from, $to, $label, $techn, $descr, $sprite, $tags, $link, "", "")
 activate $to
 !endprocedure
+
+!unquoted procedure Activate($obj)
+activate $obj
+!endprocedure
+
+!unquoted procedure Deactivate($obj)
+deactivate $obj
+!endprocedure
+
+!unquoted procedure TimeBreak()
+...
+!endprocedure

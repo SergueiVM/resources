@@ -91,3 +91,19 @@ deactivate $obj
 !unquoted procedure TimeBreak()
 ...
 !endprocedure
+
+!unquoted procedure Alt($txt)
+alt $txt
+!endprocedure
+
+!unquoted procedure Else($txt)
+else $txt
+!endprocedure
+
+!unquoted procedure Else()
+else
+!endprocedure
+
+!unquoted procedure End()
+end
+!endprocedure

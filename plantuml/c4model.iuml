@@ -85,4 +85,20 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 ' DO NOTHING
 !endprocedure
 
+!unquoted procedure Alt($txt)
+' DO NOTHING
+!endprocedure
+
+!unquoted procedure Else($txt)
+' DO NOTHING
+!endprocedure
+
+!unquoted procedure Else()
+' DO NOTHING
+!endprocedure
+
+!unquoted procedure End()
+' DO NOTHING
+!endprocedure
+
 @enduml

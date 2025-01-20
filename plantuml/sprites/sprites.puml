@@ -1,0 +1,9 @@
+@startuml
+
+!include ./sprites.iuml
+
+
+component "<$AzureCosmosDb>\nTest" as cosmosDB
+
+
+@enduml

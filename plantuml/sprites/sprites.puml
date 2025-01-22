@@ -3,7 +3,9 @@
 !include ./sprites.iuml
 
 
-component "<$AzureCosmosDb>\nTest" as cosmosDB
+component "<$AzureCosmosDb>\nAzureCosmosDb" as cosmosDB
+component "<$Azure>\nAzure" as azure
+component "<$AzureSynapseAnalytics>\nAzureSynapseAnalytics" as AzureSynapseAnalytics
 
 
 @enduml

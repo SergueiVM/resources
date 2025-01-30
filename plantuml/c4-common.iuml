@@ -1,7 +1,7 @@
 @startuml
 skinparam {
   RoundCorner 10
-  BackgroundColor transparent
+  BackgroundColor white
 }
 
 'For highlight difference

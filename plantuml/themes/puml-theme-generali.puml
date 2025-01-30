@@ -116,3 +116,23 @@
 !$EIGHT_SIDED_SIZE ?= 18
 
 skinparam SequenceBoxBackgroundColor white
+
+<style>
+ganttDiagram {
+    task {
+      FontColor $GEN_TEXT_COLOR
+      BackGroundColor $GEN_COLOR_PRIMARY_2
+      LineColor $GEN_COLOR_PRIMARY_1
+    }
+    milestone {
+      FontColor $GEN_TEXT_COLOR
+      BackGroundColor $GEN_COLOR_PRIMARY_2
+      LineColor $GEN_COLOR_PRIMARY_1
+    }
+    arrow {
+      'LineColor $GEN_BORDER_COLOR
+      LineColor Grey
+	  }
+
+}
+</style>

@@ -114,3 +114,5 @@
 
 !$ROUNDED_BOX_SIZE ?= 25
 !$EIGHT_SIDED_SIZE ?= 18
+
+skinparam SequenceBoxBackgroundColor white

@@ -1,3 +1,4 @@
+@startuml
 !define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
@@ -107,3 +108,8 @@ else
 !unquoted procedure End()
 end
 !endprocedure
+
+!unquoted procedure Loop($txt)
+loop $txt
+!endprocedure
+@enduml

@@ -3,6 +3,7 @@
 
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Dynamic.puml
 !include BASEPATH/plantuml/sprites/sprites.iuml
 !include BASEPATH/plantuml/c4-common.iuml
 !include BASEPATH/plantuml/c4-tags.iuml
@@ -65,12 +66,18 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 
 
 'Sequence Responses -> Do NOT show them
-!unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="", $index="", $rel="")
-Rel($to, $from, $label, $techn, $descr, $sprite, $tags, $link, $index, $rel)
+' !unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="", $index="", $rel="")
+' Rel($to, $from, $label, $techn, $descr, $sprite, $tags, $link, $index, $rel)
+' !endprocedure
+
+!unquoted procedure Rel($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
+
+$getRel("-->>", $from, $to, "(" + Index() + ") " + $label, $techn, $descr, $sprite, $tags, $link)
 !endprocedure
 
 !unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
-Rel($to, $from, $label, $techn, $descr, $sprite, $tags, $link)
+
+$getRel("-->>", $to, $from, "(" + Index() + ") " + $label, $techn, $descr, $sprite, $tags, $link)
 !endprocedure
 
 !unquoted procedure Activate($obj)

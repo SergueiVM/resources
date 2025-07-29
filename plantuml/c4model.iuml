@@ -104,4 +104,8 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 !unquoted procedure Loop($txt)
 ' DO NOTHING
 !endprocedure
+
+!unquoted procedure RemoveUnlinked()
+remove @unlinked
+!endprocedure
 @enduml

@@ -112,4 +112,8 @@ end
 !unquoted procedure Loop($txt)
 loop $txt
 !endprocedure
+
+!unquoted procedure RemoveUnlinked()
+' DO NOTHING
+!endprocedure
 @enduml

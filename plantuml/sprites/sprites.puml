@@ -7,6 +7,7 @@ component "<$AzureCosmosDb>\nAzureCosmosDb" as cosmosDB
 component "<$Azure>\nAzure" as azure
 component "<$AzureSynapseAnalytics>\nAzureSynapseAnalytics" as AzureSynapseAnalytics
 component "<$okta>\nOkta" as okta
+component "<$docpath>\nDocPath" as docpath
 
 
 @enduml

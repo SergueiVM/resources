@@ -97,11 +97,11 @@ deactivate $obj
 alt $txt
 !endprocedure
 
-!unquoted procedure Par($txt)
-alt $txt
+!unquoted procedure Par($txt="")
+par $txt
 !endprocedure
 
-!unquoted procedure Else($txt)
+!unquoted procedure Else($txt="")
 else $txt
 !endprocedure
 

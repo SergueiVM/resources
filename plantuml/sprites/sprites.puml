@@ -9,6 +9,8 @@ component "<$AzureSynapseAnalytics>\nAzureSynapseAnalytics" as AzureSynapseAnaly
 component "<$okta>\nOkta" as okta
 component "<$docpath>\nDocPath" as docpath
 component "<$mailteck>\nMailteck" as mailteck
+component "<$generali>\nGenerali" as generali
+component "<$generali-vertical>\nGenerali Vertical" as generaliVertical
 
 
 @enduml

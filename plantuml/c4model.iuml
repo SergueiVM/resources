@@ -1,6 +1,7 @@
 @startuml
     '!define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
-    !define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/refs/heads/feature/switch-type-diagram-flag
+    '!define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/refs/heads/feature/switch-type-diagram-flag
+    !define BASEPATH .
 
     ' Si se ha declarado la variable
     '!define SECUENCE_DIAGRAM

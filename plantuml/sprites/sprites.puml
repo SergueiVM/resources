@@ -12,6 +12,7 @@ component "<$mailteck>\nMailteck" as mailteck
 component "<$generali>\nGenerali" as generali
 component "<$generali-vertical>\nGenerali Vertical" as generaliVertical
 component "<$cercalia>\nCercalia" as cercalia
+component "<$nexusgeographics>\nNexus Geographics" as nexusGeographics
 
 
 @enduml

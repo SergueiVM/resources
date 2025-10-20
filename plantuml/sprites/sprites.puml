@@ -13,7 +13,8 @@ component "<$generali>\nGenerali" as generali
 component "<$generali-vertical>\nGenerali Vertical" as generaliVertical
 component "<$cercalia>\nCercalia" as cercalia
 component "<$nexusgeographics>\nNexus Geographics" as nexusGeographics
-component "<$ibm>\nIBM" as ibm
+component "<$ibm>\nibm" as ibm
+component "<$puzzle>\npuzzle" as puzzle
 
 
 @enduml

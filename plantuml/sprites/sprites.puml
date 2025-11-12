@@ -16,6 +16,7 @@ component "<$nexusgeographics>\nNexus Geographics" as nexusGeographics
 component "<$ibm>\nibm" as ibm
 component "<$puzzle>\npuzzle" as puzzle
 component "<$ibmwebsphere>\ibmwebsphere" as ibmwebsphere
+component "<$pl1>\npl1" as pl1
 
 
 @enduml

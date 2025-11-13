@@ -118,6 +118,6 @@ loop $txt
 !endprocedure
 
 !unquoted procedure RemoveUnlinked()
-' DO NOTHING
+hide @unlinked
 !endprocedure
 @enduml

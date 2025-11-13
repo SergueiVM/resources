@@ -1,8 +1,8 @@
 @startuml
     !define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
 
-    ' Si se ha declarado la variable
-    '!define SECUENCE_DIAGRAM
+    ' Si se ha declarado la variable, tiene que estar en la primera linea del diagrama
+    '!define SEQUENCE_DIAGRAM
     !if %variable_exists("SEQUENCE_DIAGRAM")
         !include BASEPATH/plantuml/c4model-sequence.iuml
     !else

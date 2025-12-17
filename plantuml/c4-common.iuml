@@ -4,6 +4,14 @@ skinparam {
   BackgroundColor white
 }
 
+skinparam note {
+  BackgroundColor transparent
+  Shadowing false
+  RoundCorner 10
+  FontSize 12
+}
+skinparam NoteTextAlignment left
+
 'For highlight difference
 !$NEW_COLOR ?= "ForestGreen"
 !$NEW_BORDER_THICKNESS ?= 3

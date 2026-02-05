@@ -17,6 +17,6 @@ component "<$ibmwebsphere>\nibmwebsphere" as ibmwebsphere
 component "<$pl1>\npl1" as pl1
 component "<$lego>\nlego" as lego
 component "<$whatsapp>\nwhatsapp" as whatsapp
-
+component "<$render>\nrender" as render
 
 @enduml

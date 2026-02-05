@@ -1,7 +1,5 @@
 @startuml
-
-!include ./sprites.iuml
-
+!include sprites.iuml
 
 component "<$AzureCosmosDb>\nAzureCosmosDb" as cosmosDB
 component "<$Azure>\nAzure" as azure
@@ -15,9 +13,10 @@ component "<$cercalia>\nCercalia" as cercalia
 component "<$nexusgeographics>\nNexus Geographics" as nexusGeographics
 component "<$ibm>\nibm" as ibm
 component "<$puzzle>\npuzzle" as puzzle
-component "<$ibmwebsphere>\ibmwebsphere" as ibmwebsphere
+component "<$ibmwebsphere>\nibmwebsphere" as ibmwebsphere
 component "<$pl1>\npl1" as pl1
 component "<$lego>\nlego" as lego
+component "<$whatsapp>\nwhatsapp" as whatsapp
 
 
 @enduml

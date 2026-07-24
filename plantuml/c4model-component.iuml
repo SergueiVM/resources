@@ -110,4 +110,14 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 !unquoted procedure RemoveUnlinked()
 remove @unlinked
 !endprocedure
+
+!unquoted procedure Cloud_Boundary($alias, $label, $type="Cloud", $tags="", $link="", $descr = "")
+
+!$boundaryTags = $addBoundaryPostfix($tags)
+!$type=$toElementArg($type, $boundaryTags, "ElementTagTechn", "boundary")
+!$sprite=$toElementArg("", $boundaryTags, "ElementTagSprite", "boundary")
+
+cloud "$getBoundary($label, $type, $descr, $sprite)" $toStereos("boundary", $boundaryTags) as $alias $getLink($link) {
+
+!endprocedure
 @enduml

@@ -18,5 +18,8 @@ component "<$pl1>\npl1" as pl1
 component "<$lego>\nlego" as lego
 component "<$whatsapp>\nwhatsapp" as whatsapp
 component "<$render>\nrender" as render
+component "<$jenkins>\njenkins" as jenkins
+component "<$gitlab>\gitlab" as gitlab
+component "<$jfrog>\jfrog" as jfrog
 
 @enduml

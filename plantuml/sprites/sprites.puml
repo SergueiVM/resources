@@ -23,5 +23,6 @@ component "<$gitlab>\ngitlab" as gitlab
 component "<$jfrog>\njfrog" as jfrog
 component "<$docker>\ndocker" as docker
 component "<$jira>\njira" as jira
+component "<$nexusrepository>\nnexusrepository" as nexusrepository
 
 @enduml

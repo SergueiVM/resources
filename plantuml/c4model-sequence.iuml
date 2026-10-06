@@ -124,4 +124,8 @@ hide @unlinked
 !unquoted procedure Cloud_Boundary($alias, $label, $type="Cloud", $tags="", $link="", $descr = "")
     Boundary($alias, $label, $type, $tags, $link, $descr)
 !endprocedure
+
+!unquoted procedure LAYOUT_LANDSCAPE()
+' DO NOTHING
+!endprocedure
 @enduml

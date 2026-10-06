@@ -22,4 +22,5 @@ skinparam ranksep 100
 !$DEPRECATE_COLOR ?= "Tomato"
 
 hide @unlinked
+HIDE_STEREOTYPE()
 @enduml

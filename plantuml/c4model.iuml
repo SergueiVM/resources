@@ -16,4 +16,6 @@
             !include BASEPATH/plantuml/c4model-dynamic.iuml
         !endif
     !endif
+
+    !include BASEPATH/plantuml/c4-legend.iuml
 @enduml

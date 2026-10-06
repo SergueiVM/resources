@@ -1,0 +1,76 @@
+!procedure $showAlignedLegendRow($tagStereo)
+!if (%variable_exists("$" + $tagStereo + "Legend"))
+  !$entry = %get_variable_value("$" + $tagStereo + "LegendEntry")
+  !$isRelation = (%substr($tagStereo, %strlen($tagStereo) - 5) == "_Line")
+  !$backgroundTag = ""
+  !if ($isRelation == %false())
+    !$backgroundEnd = %strpos($entry, ">")
+    !$backgroundTag = %substr($entry, 1, $backgroundEnd)
+  !endif
+  !$borderClose = %strpos($entry, "</color>")
+  !$afterBorder = %substr($entry, $borderClose + 8)
+  !$fontColorPos = $borderClose + 8 + %strpos($afterBorder, "<color:")
+  !$marker = ""
+  !if ($isRelation)
+    !$marker = %substr($entry, 1, $fontColorPos - 1)
+  !endif
+  !$fontAndText = %substr($entry, $fontColorPos)
+  !$fontColorEnd = %strpos($fontAndText, ">")
+  !$fontColorTag = %substr($fontAndText, 0, $fontColorEnd + 1)
+  !$textAndSprite = %substr($fontAndText, $fontColorEnd + 1)
+  !while (%substr($textAndSprite, 0, 1) == " ")
+    !$textAndSprite = %substr($textAndSprite, 1)
+  !endwhile
+  !$spriteStart = %strpos($textAndSprite, "<")
+  !$sprite = ""
+  !if ($spriteStart == 0)
+    !$spriteEnd = %strpos($textAndSprite, ">")
+    !$sprite = %substr($textAndSprite, 0, $spriteEnd + 1)
+    !$legendText = %substr($textAndSprite, $spriteEnd + 1)
+  !else
+    !$legendText = $textAndSprite
+  !endif
+  !while (%substr($legendText, 0, 1) == " ")
+    !$legendText = %substr($legendText, 1)
+  !endwhile
+  !$legendDetails = %get_variable_value("$" + $tagStereo + "LegendDetails")
+  !$detailsEnd = %strpos($legendDetails, "</size>")
+  !$details = %substr($legendDetails, 0, $detailsEnd + 7)
+  !if ($isRelation)
+    !$row = "|=" + $marker + "|"
+  !else
+    !$row = "|=" + $backgroundTag + $fontColorTag + $sprite
+    !if ($sprite != "")
+      !$row = $row + " "
+    !endif
+    !$row = $row + "</color>|"
+  !endif
+  !$row = $row + $backgroundTag + $fontColorTag + $legendText + "</color>|"
+  !$row = $row + $backgroundTag + $fontColorTag + "<size:" + $LEGEND_DETAILS_SIZE + ">" + $details + "</color>|"
+$row
+!endif
+!endprocedure
+
+!procedure $showAlignedLegendRows($allDefined)
+  !$brPos = %strpos($allDefined, "\n")
+  !while ($brPos >= 0)
+    !$tagStereo = %substr($allDefined, 0, $brPos)
+    !$allDefined = %substr($allDefined, $brPos + 2)
+    !$brPos = %strpos($allDefined, "\n")
+$showAlignedLegendRow($tagStereo)
+  !endwhile
+  !if (%strlen($allDefined) > 0)
+    !$tagStereo = $allDefined
+$showAlignedLegendRow($tagStereo)
+  !endif
+!endprocedure
+
+!unquoted procedure SHOW_LEGEND($hideStereotype="true", $details=Small())
+$getHideStereotype($hideStereotype)
+!global $LEGEND_DETAILS_SIZE = $getLegendDetailsSize($details)
+legend right
+| |<color:$LEGEND_TITLE_COLOR>**$LEGEND_TITLE_TEXT**</color>| |
+$showAlignedLegendRows($tagDefaultLegend)
+$showAlignedLegendRows($tagCustomLegend)
+endlegend
+!endprocedure

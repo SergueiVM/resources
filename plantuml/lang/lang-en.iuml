@@ -1,0 +1,50 @@
+' C4-PlantUML English text labels.
+' Include before C4-PlantUML to use English legend and boundary text.
+
+!$BOUNDARY_LEGEND_TEXT ?= "Boundary"
+
+!$LEGEND_TITLE_TEXT ?= "Legend"
+
+' !$LEGEND_BOUNDARY ?= "boundary"
+' !$LEGEND_BOUNDARY_PRE_PART ?= ""
+' !$LEGEND_BOUNDARY_POST_PART ?= " " + $LEGEND_BOUNDARY
+
+!$LEGEND_SHADOW_TEXT ?= "Shadow"
+!$LEGEND_NO_SHADOW_TEXT ?= "No shadow"
+!$LEGEND_NO_FONT_BG_TEXT ?= "Last text and background colors"
+!$LEGEND_NO_FONT_TEXT ?= "Last text color"
+!$LEGEND_NO_BG_TEXT ?= "Last background color"
+!$LEGEND_NO_LINE_TEXT ?= "Last line color"
+' !$LEGEND_SHARP_CORNER ?= "Box"
+' !$LEGEND_ROUNDED_BOX ?= "Rounded box"
+' !$LEGEND_EIGHT_SIDED ?= "Octagonal"
+' !$LEGEND_DOTTED_LINE ?= "Dotted"
+' !$LEGEND_DASHED_LINE ?= "Dashed"
+' !$LEGEND_BOLD_LINE ?= "Thick"
+' !$LEGEND_SOLID_LINE ?= "Solid"
+' !$LEGEND_BOUNDARY_TRANSPARENT_INCL_COMA ?= ""
+' !$LEGEND_BOUNDARY_DASHED_INCL_COMA ?= "Dashed, "
+' !$LEGEND_THICKNESS ?= "thickness"
+' !$SKETCH_FOOTER_WARNING ?= "Warning:"
+' !$SKETCH_FOOTER_TEXT ?= "Draft for discussion; pending validation"
+
+!$COMPONENT_LEGEND_TEXT ?= "Component"
+!$EXTERNAL_COMPONENT_LEGEND_TEXT ?= "External component"
+
+!$CONTAINER_LEGEND_TEXT ?= "Container"
+' !$CONTAINER_BOUNDARY_TYPE ?= "container"
+!$CONTAINER_BOUNDARY_LEGEND_TEXT ?= "Container boundary"
+!$EXTERNAL_CONTAINER_LEGEND_TEXT ?= "External container"
+
+!$PERSON_LEGEND_TEXT ?= "Person"
+!$EXTERNAL_PERSON_LEGEND_TEXT ?= "External person"
+
+!$SYSTEM_LEGEND_TEXT ?= "System"
+' !$SYSTEM_BOUNDARY_TYPE ?= "system"
+!$SYSTEM_BOUNDARY_LEGEND_TEXT ?= "System boundary"
+!$EXTERNAL_SYSTEM_LEGEND_TEXT ?= "External system"
+
+' !$ENTERPRISE_BOUNDARY_TYPE ?= "enterprise"
+!$ENTERPRISE_BOUNDARY_LEGEND_TEXT ?= "Enterprise boundary"
+
+!$NODE_LEGEND_TEXT ?= "Node"

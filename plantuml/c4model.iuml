@@ -1,7 +1,12 @@
 @startuml
     !define BASEPATH https://raw.githubusercontent.com/SergueiVM/resources/master
 
-    ' Si se ha declarado la variable, tiene que estar en la primera linea del diagrama
+    ' Set !define LANGUAGE es (or en) before including this file.
+    !if %variable_exists("LANGUAGE")
+        !$language = %lower(%get_variable_value("LANGUAGE"))
+        !include? BASEPATH/plantuml/lang/lang-$language.iuml
+    !endif
+
     '!define SEQUENCE_DIAGRAM
     !if %variable_exists("SEQUENCE_DIAGRAM")
         !include BASEPATH/plantuml/c4model-sequence.iuml

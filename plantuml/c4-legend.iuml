@@ -37,9 +37,9 @@
   !$detailsEnd = %strpos($legendDetails, "</size>")
   !$details = %substr($legendDetails, 0, $detailsEnd + 7)
   !if ($isRelation)
-    !$row = "|=" + $marker + "|"
+    !$row = "|" + $marker + "|"
   !else
-    !$row = "|=" + $backgroundTag + $fontColorTag + $sprite
+    !$row = "|" + $backgroundTag + $fontColorTag + $sprite
     !if ($sprite != "")
       !$row = $row + " "
     !endif

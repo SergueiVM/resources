@@ -12,6 +12,10 @@ skinparam note {
 }
 skinparam NoteTextAlignment left
 
+' Aumentamos la separacion entre entidades
+skinparam nodesep 100
+skinparam ranksep 100
+
 'For highlight difference
 !$NEW_COLOR ?= "ForestGreen"
 !$NEW_BORDER_THICKNESS ?= 3

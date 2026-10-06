@@ -7,5 +7,8 @@
         !include BASEPATH/plantuml/c4model-sequence.iuml
     !else
         !include BASEPATH/plantuml/c4model-component.iuml
+        !if %variable_exists("DYNAMIC_DIAGRAM")
+            !include BASEPATH/plantuml/c4model-dynamic.iuml
+        !endif
     !endif
 @enduml

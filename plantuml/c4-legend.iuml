@@ -1,7 +1,10 @@
 !procedure $showAlignedLegendRow($tagStereo)
 !if (%variable_exists("$" + $tagStereo + "Legend"))
   !$entry = %get_variable_value("$" + $tagStereo + "LegendEntry")
-  !$isRelation = (%substr($tagStereo, %strlen($tagStereo) - 5) == "_Line")
+  !$isRelation = %false()
+  !if (%strlen($tagStereo) >= 5)
+    !$isRelation = (%substr($tagStereo, %strlen($tagStereo) - 5) == "_Line")
+  !endif
   !$backgroundTag = ""
   !if ($isRelation == %false())
     !$backgroundEnd = %strpos($entry, ">")

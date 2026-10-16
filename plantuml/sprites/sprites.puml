@@ -27,5 +27,6 @@ component "<$nexusrepository>\nnexusrepository" as nexusrepository
 component "<$kutxabank>\nkutxabank" as kutxabank
 component "<$shared-folder>\nshared-folder" as sharedFolder
 component "<$docmgmnt>\ndocmgmnt" as docmgmnt
+component "<$db>\ndb" as db
 
 @enduml

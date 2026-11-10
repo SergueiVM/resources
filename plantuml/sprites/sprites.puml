@@ -28,5 +28,6 @@ component "<$kutxabank>\nkutxabank" as kutxabank
 component "<$shared-folder>\nshared-folder" as sharedFolder
 component "<$docmgmnt>\ndocmgmnt" as docmgmnt
 component "<$db>\ndb" as db
+component "<$nebula>\nnebula" as nebula
 
 @enduml

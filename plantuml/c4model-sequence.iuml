@@ -128,4 +128,16 @@ hide @unlinked
 !unquoted procedure LAYOUT_LANDSCAPE()
 ' DO NOTHING
 !endprocedure
+!unquoted procedure Lay_D($from, $to)
+' DO NOTHING
+!endprocedure
+!unquoted procedure Lay_U($from, $to)
+' DO NOTHING
+!endprocedure
+!unquoted procedure Lay_R($from, $to)
+' DO NOTHING
+!endprocedure
+!unquoted procedure Lay_L($from, $to)
+' DO NOTHING
+!endprocedure
 @enduml

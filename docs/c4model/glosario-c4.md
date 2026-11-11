@@ -55,9 +55,10 @@ MergeRelations()
 ```
 
 La etiqueta, la tecnología y la descripción se concatenan en el orden de las
-llamadas, separadas por líneas. El estilo (sprite, tags y enlace) de la primera
-relación de cada grupo se aplica a la flecha resultante. Los diagramas de
-secuencia no se ven afectados.
+llamadas, separadas por líneas; los valores no vacíos exactamente iguales se
+incluyen una sola vez. El estilo (sprite, tags y enlace) de la primera relación
+de cada grupo se aplica a la flecha resultante. Los diagramas de secuencia no
+se ven afectados.
 
 ## Lectura de los niveles
 

@@ -95,30 +95,60 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
     !$hasLabel = %false()
     !$hasTechn = %false()
     !$hasDescr = %false()
+    !$labels = []
+    !$technologies = []
+    !$descriptions = []
     !foreach $candidate in $C4_RELATION_QUEUE
       !if ($candidate.direction == $relation.direction && $candidate.from == $relation.from && $candidate.to == $relation.to)
         !if ($candidate.label != "")
-          !if ($hasLabel == %true())
-            !$label = $label + "\n" + $candidate.label
-          !else
-            !$label = $candidate.label
-            !$hasLabel = %true()
+          !$isNewLabel = %true()
+          !foreach $previousLabel in $labels
+            !if ($previousLabel == $candidate.label)
+              !$isNewLabel = %false()
+            !endif
+          !endfor
+          !if ($isNewLabel)
+            !if ($hasLabel == %true())
+              !$label = $label + "\n" + $candidate.label
+            !else
+              !$label = $candidate.label
+              !$hasLabel = %true()
+            !endif
+            !$labels = %json_add($labels, $candidate.label)
           !endif
         !endif
         !if ($candidate.techn != "")
-          !if ($hasTechn == %true())
-            !$techn = $techn + "\n" + $candidate.techn
-          !else
-            !$techn = $candidate.techn
-            !$hasTechn = %true()
+          !$isNewTechn = %true()
+          !foreach $previousTechn in $technologies
+            !if ($previousTechn == $candidate.techn)
+              !$isNewTechn = %false()
+            !endif
+          !endfor
+          !if ($isNewTechn)
+            !if ($hasTechn == %true())
+              !$techn = $techn + "\n" + $candidate.techn
+            !else
+              !$techn = $candidate.techn
+              !$hasTechn = %true()
+            !endif
+            !$technologies = %json_add($technologies, $candidate.techn)
           !endif
         !endif
         !if ($candidate.descr != "")
-          !if ($hasDescr == %true())
-            !$descr = $descr + "\n" + $candidate.descr
-          !else
-            !$descr = $candidate.descr
-            !$hasDescr = %true()
+          !$isNewDescr = %true()
+          !foreach $previousDescr in $descriptions
+            !if ($previousDescr == $candidate.descr)
+              !$isNewDescr = %false()
+            !endif
+          !endfor
+          !if ($isNewDescr)
+            !if ($hasDescr == %true())
+              !$descr = $descr + "\n" + $candidate.descr
+            !else
+              !$descr = $candidate.descr
+              !$hasDescr = %true()
+            !endif
+            !$descriptions = %json_add($descriptions, $candidate.descr)
           !endif
         !endif
       !endif

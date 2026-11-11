@@ -12,8 +12,12 @@
         !include BASEPATH/plantuml/c4model-sequence.iuml
     !else
         !include BASEPATH/plantuml/c4model-component.iuml
-        !if %variable_exists("DYNAMIC_DIAGRAM")
-            !include BASEPATH/plantuml/c4model-dynamic.iuml
+        !if %variable_exists("FORCE_COMPONENT_DIAGRAM")
+            ' Keep component-only macros when explicitly requested.
+        !else
+            !if %variable_exists("DYNAMIC_DIAGRAM")
+                !include BASEPATH/plantuml/c4model-dynamic.iuml
+            !endif
         !endif
     !endif
 

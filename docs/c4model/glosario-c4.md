@@ -60,6 +60,20 @@ incluyen una sola vez. El estilo (sprite, tags y enlace) de la primera relación
 de cada grupo se aplica a la flecha resultante. Los diagramas de secuencia no
 se ven afectados.
 
+## Forzar un diagrama de componentes
+
+Si un fragmento define `DYNAMIC_DIAGRAM` antes de incluir este modelo, define
+`FORCE_COMPONENT_DIAGRAM` antes de incluir los fragmentos. Esta opción tiene
+prioridad y evita cargar las macros de diagramas dinámicos:
+
+```plantuml
+!define FORCE_COMPONENT_DIAGRAM
+!include fragmento-dinamico.puml
+```
+
+Los diagramas de secuencia siguen teniendo prioridad si también se define
+`SEQUENCE_DIAGRAM`.
+
 ## Lectura de los niveles
 
 Los diagramas se pueden leer como una secuencia de acercamientos:

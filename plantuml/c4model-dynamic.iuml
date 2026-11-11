@@ -72,12 +72,22 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 
 !unquoted procedure Rel($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
 
-$getRel("-->>", $from, $to, "(" + Index() + ") " + $label, $techn, $descr, $sprite, $tags, $link)
+!$label = "(" + Index() + ") " + $label
+!if %variable_exists("MERGE_RELATIONS")
+  CollectRelation("-->>", $from, $to, $label, $techn, $descr, $sprite, $tags, $link)
+!else
+  $getRel("-->>", $from, $to, $label, $techn, $descr, $sprite, $tags, $link)
+!endif
 !endprocedure
 
 !unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
 
-$getRel("-->>", $to, $from, "(" + Index() + ") " + $label, $techn, $descr, $sprite, $tags, $link)
+!$label = "(" + Index() + ") " + $label
+!if %variable_exists("MERGE_RELATIONS")
+  CollectRelation("-->>", $to, $from, $label, $techn, $descr, $sprite, $tags, $link)
+!else
+  $getRel("-->>", $to, $from, $label, $techn, $descr, $sprite, $tags, $link)
+!endif
 !endprocedure
 
 !unquoted procedure Activate($obj)

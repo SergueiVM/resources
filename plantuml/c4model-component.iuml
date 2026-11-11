@@ -62,6 +62,82 @@ rectangle "$getNode_R($label, $type, $descr, $sprite)$getProps_R()" $toStereos("
 !endprocedure
 
 
+' Relationship merging for component and dynamic diagrams
+!$C4_RELATION_QUEUE ?= []
+
+!unquoted procedure CollectRelation($direction, $from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
+!$relation = {}
+!$relation = %json_set($relation, "direction", $direction)
+!$relation = %json_set($relation, "from", $from)
+!$relation = %json_set($relation, "to", $to)
+!$relation = %json_set($relation, "label", $label)
+!$relation = %json_set($relation, "techn", $techn)
+!$relation = %json_set($relation, "descr", $descr)
+!$relation = %json_set($relation, "sprite", $sprite)
+!$relation = %json_set($relation, "tags", $tags)
+!$relation = %json_set($relation, "link", $link)
+!global $C4_RELATION_QUEUE = %json_add($C4_RELATION_QUEUE, $relation)
+!endprocedure
+
+!unquoted procedure MergeRelations()
+!$seen = []
+!foreach $relation in $C4_RELATION_QUEUE
+  !$isFirst = %true()
+  !foreach $previous in $seen
+    !if ($previous.direction == $relation.direction && $previous.from == $relation.from && $previous.to == $relation.to)
+      !$isFirst = %false()
+    !endif
+  !endfor
+  !if ($isFirst)
+    !$label = ""
+    !$techn = ""
+    !$descr = ""
+    !$hasLabel = %false()
+    !$hasTechn = %false()
+    !$hasDescr = %false()
+    !foreach $candidate in $C4_RELATION_QUEUE
+      !if ($candidate.direction == $relation.direction && $candidate.from == $relation.from && $candidate.to == $relation.to)
+        !if ($candidate.label != "")
+          !if ($hasLabel == %true())
+            !$label = $label + "\n" + $candidate.label
+          !else
+            !$label = $candidate.label
+            !$hasLabel = %true()
+          !endif
+        !endif
+        !if ($candidate.techn != "")
+          !if ($hasTechn == %true())
+            !$techn = $techn + "\n" + $candidate.techn
+          !else
+            !$techn = $candidate.techn
+            !$hasTechn = %true()
+          !endif
+        !endif
+        !if ($candidate.descr != "")
+          !if ($hasDescr == %true())
+            !$descr = $descr + "\n" + $candidate.descr
+          !else
+            !$descr = $candidate.descr
+            !$hasDescr = %true()
+          !endif
+        !endif
+      !endif
+    !endfor
+    $getRel($relation.direction, $relation.from, $relation.to, $label, $techn, $descr, $relation.sprite, $relation.tags, $relation.link)
+    !$seen = %json_add($seen, $relation)
+  !endif
+!endfor
+!global $C4_RELATION_QUEUE = []
+!endprocedure
+
+!unquoted procedure Rel($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="")
+!if %variable_exists("MERGE_RELATIONS")
+  CollectRelation("-->>", $from, $to, $label, $techn, $descr, $sprite, $tags, $link)
+!else
+  $getRel("-->>", $from, $to, $label, $techn, $descr, $sprite, $tags, $link)
+!endif
+!endprocedure
+
 'Sequence Responses -> Do NOT show them
 !unquoted procedure Resp($from, $to, $label, $techn="", $descr="", $sprite="", $tags="", $link="", $index="", $rel="")
 ' DO NOTHING

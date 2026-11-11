@@ -38,6 +38,27 @@ de detalle.
 | **Boundary** | En los includes de este repositorio, macro que dibuja un límite con una etiqueta opcional; es una convención de representación, no un tipo adicional de elemento C4. |
 | **Node / Deployment_Node** | Macros de los includes de este repositorio para representar nodos de despliegue. La forma concreta depende de la macro y del diagrama usado. |
 
+## Agrupar relaciones repetidas
+
+En diagramas de componentes o dinámicos, se pueden agrupar las llamadas `Rel`
+que tengan el mismo origen, destino y dirección. Define
+`MERGE_RELATIONS` antes de incluir `c4model.iuml`, incluye después los
+fragmentos y llama a `MergeRelations()` una sola vez cuando todos estén
+cargados:
+
+```plantuml
+!define MERGE_RELATIONS
+!include BASEPATH/plantuml/c4model.iuml
+!include fragmento-uno.puml
+!include fragmento-dos.puml
+MergeRelations()
+```
+
+La etiqueta, la tecnología y la descripción se concatenan en el orden de las
+llamadas, separadas por líneas. El estilo (sprite, tags y enlace) de la primera
+relación de cada grupo se aplica a la flecha resultante. Los diagramas de
+secuencia no se ven afectados.
+
 ## Lectura de los niveles
 
 Los diagramas se pueden leer como una secuencia de acercamientos:
